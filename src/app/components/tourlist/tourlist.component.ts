@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../services/data.service';
-import {LogService} from '../services/log.service';
+import {DataService} from '../../services/data.service';
+import {LogService} from '../../services/log.service';
 
 @Component({
   selector: 'app-tourlist',

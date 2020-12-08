@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {BookingComponent} from './booking/booking.component';
-import {LayoutComponent} from './layout/layout.component';
-import {MainPageComponent} from './main-page/main-page.component';
-import {BookingTicketComponent} from './booking-ticket/booking-ticket.component';
-import {TourlistComponent} from './tourlist/tourlist.component';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
-import {CartComponent} from './cart/cart.component';
+import {BookingComponent} from './components/booking/booking.component';
+import {MainPageComponent} from './components/main-page/main-page.component';
+import {BookingTicketComponent} from './components/booking-ticket/booking-ticket.component';
+import {TourlistComponent} from './components/tourlist/tourlist.component';
+import {CartComponent} from './components/cart/cart.component';
+import {ParentAgendaComponent} from './components/parent-agenda/parent-agenda.component';
 
 const routes: Routes = [
   {
     path: '',
   component: MainPageComponent
-  },
-  {
-    path: 'app-layout',
-    component: LayoutComponent
   },
   { path: 'app-booking',
     component: BookingComponent
@@ -29,19 +23,16 @@ const routes: Routes = [
     component: TourlistComponent
   },
   {
-    path: 'app-register',
-    component: RegisterComponent
-  },
-  {
-    path: 'app-login',
-    component: LoginComponent
-  },
-  {
     path: 'app-cart',
     component: CartComponent
-  }
-
-
+  },
+  {
+    path: 'app-parent-agenda',
+    component: ParentAgendaComponent
+  },
+  { path: 'adminModule', loadChildren: () => import('./admin-module/admin-module.module').then(m => m.AdminModuleModule) },
+  { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
+  { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) }
 ];
 
 @NgModule({

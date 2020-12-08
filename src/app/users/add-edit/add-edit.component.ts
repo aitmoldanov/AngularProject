@@ -6,7 +6,7 @@ import {AlertService} from '../../services/alert.service';
 import {first} from 'rxjs/operators';
 
 @Component({
-  selector: 'add-edit',
+  selector: 'app-add-edit',
   templateUrl: './add-edit.component.html',
   styleUrls: ['./add-edit.component.css']
 })
